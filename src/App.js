@@ -22,7 +22,7 @@ function App() {
     const {
       data: { text },
     } = await worker.recognize(imageData);
-    setOcr(text);
+    setOcr(text.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''));
   };
 
   useEffect(() => {
@@ -62,7 +62,7 @@ function App() {
         </div>
       )}
       <div className="display-flex">
-        <img src={imageData} alt="" srcset="" />
+        <img src={imageData} alt="" srcSet="" />
         <p>{ocr}</p>
       </div>
     </div>
