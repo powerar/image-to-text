@@ -1,27 +1,24 @@
 body {
   background-color: aliceblue;
+  margin: 10px;
 }
 
-.App {
-  padding: 10px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 input {
-  margin-bottom: 5px;
+  margin: 10px;
+  align-self: center;
 }
 
 img {
   width: 30vw;
   height: auto;
   margin-right: 50px;
-}
-
-p {
-  width: 50vw;
-}
-
-.display-flex {
-  display: flex;
 }
 
 .progress-label {
@@ -31,15 +28,17 @@ p {
 .progress-bar {
   background-color: rgb(232, 232, 232);
   border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 10px;
-  max-width: 50vw;
 }
 
 .progress {
   background-color: rgb(0, 255, 170);
   width: 0%;
   height: 10px;
+}
+
+.progress-container {
+  margin: auto;
+  max-width: 20vw;
 }
 
 .App-logo {

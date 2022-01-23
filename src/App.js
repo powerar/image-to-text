@@ -43,8 +43,8 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <p>Choose an Image</p>
+      <div className="container">
+        <h1>Choose an Image</h1>
         <input
           type="file"
           name=""
@@ -54,16 +54,19 @@ function App() {
         />
       </div>
       {progress < 100 && progress > 0 && (
-        <div>
+        <div className="progress-container">
           <div className="progress-label">Progress ({progress}%)</div>
           <div className="progress-bar">
-            <div className="progress" style={{ width: `${progress}%` }}></div>
+            <div
+              className="progress bg-info"
+              style={{ width: `${progress}%` }}
+            ></div>
           </div>
         </div>
       )}
-      <div className="display-flex">
+      <div className="container">
+        <h2>{ocr}</h2>
         <img src={imageData} alt="" srcSet="" />
-        <p>{ocr}</p>
       </div>
     </div>
   );
